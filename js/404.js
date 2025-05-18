@@ -1,38 +1,27 @@
-const outerCircle = document.querySelectorAll('.circle');
-const innerCircle = document.querySelectorAll('.one');
-const orangeColumns = document.querySelectorAll('.two, .three');
-const textElements = document.querySelectorAll('.p404');
-
-let mousePos = { x: 0, y: 0 };
-
-function calculateOffsets(baseMultiplier) {
-  return {
-    horizontal: ((mousePos.x - window.innerWidth / 2) / window.innerWidth) * baseMultiplier,
-    vertical: ((mousePos.y - window.innerHeight / 2) / window.innerHeight) * baseMultiplier / 2,
-  };
+var showText = function (target, message, index, interval) {    
+  if (index < message.length) { 
+    $(target).append(message[index++]); 
+    setTimeout(function () { showText(target, message, index, interval); }, interval); 
+  } 
 }
+$(function () { 
+  showText("h1", "I am error 404.", 0, 80);    
+}); 
 
-function updateAnimation() {
-  const offsets = {
-    outerCircle: calculateOffsets(40),
-    innerCircle: calculateOffsets(30),
-    orangeColumns: calculateOffsets(20),
-    text: calculateOffsets(10),
-  };
-
-  outerCircle.forEach((element) => element.style.transform = `translate(${-offsets.outerCircle.horizontal}%, ${-offsets.outerCircle.vertical}%)`);
-  innerCircle.forEach((element) => element.style.transform = `translate(${-offsets.innerCircle.horizontal}%, ${-offsets.innerCircle.vertical}%)`);
-  orangeColumns.forEach((element) => element.style.transform = `translate(${-offsets.orangeColumns.horizontal}%, ${-offsets.orangeColumns.vertical}%)`);
-  textElements.forEach((element) => element.style.transform = `translate(${-offsets.text.horizontal}%, ${-offsets.text.vertical}%)`);
-
-  requestAnimationFrame(updateAnimation);
-}
-
-window.addEventListener("mousemove", (e) => {
-  mousePos.x = e.clientX;
-  mousePos.y = e.clientY;
+// Add hover effect sound (optional)
+const hoverSound = new Audio('./audio/hover.mp3');
+$('.btn-back').on('mouseenter', function() {
+    hoverSound.currentTime = 0;
+    hoverSound.play().catch(function(error) {
+        // Handle or ignore the error if audio can't be played
+    });
 });
 
-if(window.innerWidth>767){
-  requestAnimationFrame(updateAnimation);
-}
+// Handle back button click
+$('.btn-back').on('click', function(e) {
+    e.preventDefault();
+    const href = $(this).attr('href');
+    $('body').fadeOut(1000, function() {
+        window.location.href = href;
+    });
+}); 

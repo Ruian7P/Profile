@@ -185,7 +185,7 @@ body.dark-mode {
         transform: translateY(0);
     }
     100% {
-        opacity: 0;
+      opacity: 0;
         transform: translateY(100%);
     }
 }

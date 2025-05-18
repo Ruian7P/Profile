@@ -3,85 +3,75 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/404.css">
-        <title>Oops, Page Not Found</title>
-        <link rel="icon" type="image/png" href="/imgs/favicon.png">
+        <title>404 - Page Not Found</title>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <style>
+            body {
+                margin: 0;
+                background: #000 url('http://stixdev.com/images/404-2.png') center no-repeat;
+                height: 855px;
+                text-transform: uppercase;
+            }
+
+            h1, h2, h3 {
+                font-family: 'Press Start 2P', cursive;
+                margin: 0 auto 0 auto;
+                text-align: left;
+                position: relative;
+                text-shadow: 3px 3px 0px #2038ec;
+                color: #fff;
+                font-weight: 400;
+            }
+
+            h1 {
+                font-size: 1.7em;
+                width: 260px;
+                top: 148px;
+                line-height: 60px;
+                padding-left: 292px;
+            }
+
+            h2 {
+                top: 26px;
+                width: 150px;
+                font-size: 1.6em;
+                z-index: 1;
+            }
+
+            h2 a {
+                color: #fff;
+                text-decoration: none;
+                margin-left: 375px;
+                width: 200px;
+            }
+
+            h2 a:hover {
+                text-shadow: 3px 3px 0px #d82800;
+            }
+
+            h3 {
+                width: 400px;
+                padding-right: 300px;
+                font-size: 1.5em;
+            }
+        </style>
     </head>
     <body>
-        <!-- <div class="about">
-            <a class="bg_links social portfolio" href="https://www.rafaelalucas.com" target="_blank">
-            <span class="icon"></span>
-            </a>
-            <a class="bg_links social dribbble" href="https://dribbble.com/rafaelalucas" target="_blank">
-            <span class="icon"></span>
-            </a>
-            <a class="bg_links social linkedin" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
-            <span class="icon"></span>
-            </a>
-            <a class="bg_links logo"></a>
-        </div> -->
-    
-        <!-- <nav>
-            <div class="menu">
-                <p class="website_name">LOGO</p>
-                <div class="menu_links">
-                    <a href="" class="link">about</a>
-                    <a href="" class="link">projects</a>
-                    <a href="" class="link">contacts</a>
-                </div>
-                <div class="menu_icon">
-                    <span class="icon"></span>
-                </div>
-            </div>
-        </nav> -->
-    
-        <section class="wrapper">
-    
-            <div class="container">
-    
-                <div id="scene" class="scene" data-hover-only="false">
-    
-                    <div class="circle" data-depth="1.2"></div>
-    
-                    <div class="one" data-depth="0.9">
-                        <div class="content">
-                            <span class="piece"></span>
-                            <span class="piece"></span>
-                            <span class="piece"></span>
-                        </div>
-                    </div>
-    
-                    <div class="two" data-depth="0.60">
-                        <div class="content">
-                            <span class="piece"></span>
-                            <span class="piece"></span>
-                            <span class="piece"></span>
-                        </div>
-                    </div>
-    
-                    <div class="three" data-depth="0.40">
-                        <div class="content">
-                            <span class="piece"></span>
-                            <span class="piece"></span>
-                            <span class="piece"></span>
-                        </div>
-                    </div>
-    
-                    <p class="p404" data-depth="0.50">404</p>
-                    <p class="p404" data-depth="0.10">404</p>
-    
-                </div>
-    
-                <div class="text">
-                    <article>
-                        <p>Uh oh! Looks like you got lost. <br>Take a step back?</p>
-                        <button onclick="window.history.back()">Go Back</button>
-                        <!-- <button onclick="window.location.href = '/';">Back to Home</button> -->
-                    </article>
-                </div>
-    
-            </div>
-        </section>
+        <h2><a href="/">Stix</a></h2>
+        <h3>Page not found</h3>
+        <h1></h1>
+
+        <script>
+            var showText = function (target, message, index, interval) {    
+                if (index < message.length) { 
+                    $(target).append(message[index++]); 
+                    setTimeout(function () { showText(target, message, index, interval); }, interval); 
+                } 
+            }
+            $(function () { 
+                showText("h1", "I am error 404.", 0, 80);    
+            }); 
+        </script>
     </body>
-    <script src="/js/404.js"></script>
 </html>

@@ -1,0 +1,187 @@
+@media (min-width: 1275px) {
+    .my-name {
+        font-size: 72px;
+    }
+    .photo-container img {
+        width: 350px;
+    }
+    .my-description {
+        right: 8%;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 990px) and (max-width: 1275px) {
+    .my-description {
+        font-size: 20px;
+    }
+    .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
+        scale: 1;
+    }
+}
+
+@media (max-width: 990px) {
+    .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
+        scale: 1;
+    }
+    .tooltip-container-linked {
+        left: 40%;
+    }
+    .tooltip-container-github {
+        left: 15%;
+    }
+}
+
+@media (max-width: 767px) {
+    .my-name {
+        left: 50%;
+        transform: translateX(-50%)
+    }
+    .my-name.animate .first-text,
+    .my-name.animate .second-text {
+        animation: none !important;
+        transform: translateY(0);
+    }
+    .photo-container {
+        left: 50%;
+        top: 125%;
+        transform: translateX(-50%);
+    }
+    .my-description {
+        top: 150%;
+        right: 50%;
+        width: 60%;
+        transform: translateX(50%);
+    }
+    .tooltip-container-linked, .tooltip-container-gmail, .tooltip-container-github {
+        scale: 1;
+        left: unset;
+        right: 7%
+    }
+    .tooltip-container-linked {
+        top: 130%;
+    }
+    .tooltip-container-gmail {
+        top: 140%;
+    }
+    .tooltip-container-github {
+        top: 150%;
+    }
+    .tooltip-container-linked .tooltip, .tooltip-container-gmail .tooltip, .tooltip-container-github .tooltip {
+        display: none;
+    }
+    .tooltip-container-linked .icon .text, .tooltip-container-gmail .icon .text, .tooltip-container-github .icon .text {
+        display: none;
+    }
+    .tooltip-container-linked .icon:hover .layer, .tooltip-container-gmail .icon:hover .layer, .tooltip-container-github .icon:hover .layer {
+        transform: none;
+    }
+}
+
+@media (max-height: 834px) {
+    .photo-container {
+        top: 130%;
+    }
+    .my-description {
+        top: 165%;
+    }
+}
+
+@media (max-height: 600px) and (max-width: 767px) {
+    .photo-container {
+        top: 160%;
+    }
+    .my-description {
+        top: 240%;
+    }
+    .tooltip-container-linked {
+        top: 130%;
+    }
+    .tooltip-container-gmail {
+        top: 160%;
+    }
+    .tooltip-container-github {
+        top: 190%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .profile-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .profile-right {
+        flex: 1;
+    }
+
+    .profile-container {
+        padding: 0 2rem 2rem 2rem;
+        margin-top: -0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .profile-container {
+        padding: 0 1rem;
+        margin-top: -0.75rem;
+    }
+
+    .rotating-text {
+        font-size: 36px;
+        margin-left: 30px;
+        margin-top: 0;
+    }
+
+    .profile-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-basic-info h1 {
+        font-size: 1.75rem;
+    }
+
+    .profile-basic-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .profile-description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 0 1rem;
+        margin-top: -1rem;
+    }
+
+    .rotating-text {
+        font-size: 28px;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+
+    .profile-photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-basic-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-basic-info h2 {
+        font-size: 1rem;
+    }
+
+    .profile-description {
+        font-size: 1rem;
+    }
+}

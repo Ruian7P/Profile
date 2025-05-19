@@ -172,6 +172,16 @@
     .profile-description {
         font-size: 1.1rem;
     }
+
+    .profile-right {
+        margin-left: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .scroll-to-explore {
+        display: none !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -219,6 +229,16 @@
 
     .profile-description {
         font-size: 1rem;
+    }
+
+    .profile-right {
+        margin-left: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .scroll-to-explore {
+        display: none !important;
     }
 }
 

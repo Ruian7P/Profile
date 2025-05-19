@@ -2,14 +2,27 @@ document.querySelector('.theme-switch__checkbox').addEventListener('change', fun
     document.body.classList.toggle('dark-mode');
 });
 
+// Hide scroll-to-explore text when scrolling
+const scrollToExplore = document.querySelector('.scroll-to-explore');
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {  // Hide after scrolling 50px
+        scrollToExplore.style.opacity = '0';
+        scrollToExplore.style.transition = 'opacity 0.5s ease-out';
+    } else {
+        scrollToExplore.style.opacity = '1';
+    }
+});
+
+// Only try to access myName if it exists
 const myName = document.querySelector('.my-name');
 function handleScroll() {
-    const isVisible = window.scrollY >= myName.offsetTop - window.innerHeight;
-    if(isVisible){
-        myName.classList.add('animate');
-    }
-    else{
-        myName.classList.remove('animate');
+    if (myName) {  // Check if element exists before using it
+        const isVisible = window.scrollY >= myName.offsetTop - window.innerHeight;
+        if(isVisible) {
+            myName.classList.add('animate');
+        } else {
+            myName.classList.remove('animate');
+        }
     }
 }
 

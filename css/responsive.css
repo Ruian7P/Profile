@@ -134,8 +134,26 @@
 
     .rotating-text {
         font-size: 36px;
-        margin-left: 30px;
+        margin-left: -20px;
         margin-top: 0;
+        text-align: left !important;
+        width: 100% !important;
+        padding: 0;
+        position: relative;
+        left: 0;
+    }
+
+    .rotating-text .text-to-toggle {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .rotating-text .text-to-animation {
+        font-size: 1.4em;
+        text-align: left;
+        padding-left: 0;
     }
 
     .profile-photo img {
@@ -164,8 +182,26 @@
 
     .rotating-text {
         font-size: 28px;
-        margin-left: 20px;
+        margin-left: -20px;
         margin-top: 0;
+        text-align: left !important;
+        width: 100% !important;
+        padding: 0;
+        position: relative;
+        left: 0;
+    }
+
+    .rotating-text .text-to-toggle {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .rotating-text .text-to-animation {
+        font-size: 1.4em;
+        text-align: left;
+        padding-left: 0;
     }
 
     .profile-photo img {
@@ -183,5 +219,26 @@
 
     .profile-description {
         font-size: 1rem;
+    }
+}
+
+/* Remove the conflicting mobile styles */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-content {
+        flex-direction: column;
+    }
+
+    .profile-left, .profile-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 20px;
     }
 }
